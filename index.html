@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nucleus Flux Tracking Database</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="index.js"></script>
+</head>
+
+<body>
+<div class="hero">
+    <div class="text-container">
+        <h1>Nucleus Flux Tracking Database</h1>
+    </div>
+</div>
+<br/>
+<div class="input-group center ">
+    <div class="form-outline">
+        <input id="searchbar" onkeyup="search_database()" type="text"
+            name="search" placeholder="Search by name..." class="form-control">
+    </div>
+</div>
+
+<div>
+    <table id="nft-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Full Name</th>
+            <th>Affiliation</th>
+            <th>Occupation</th>
+            <th>Last Location</th>
+            <th>Last Seen</th> 
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>527</td>
+            <td>Savant</td>
+            <td><a href='#' data-toggle="modal" data-target="#name-modal">Neu Bouth</a></td>
+            <td>Ordos</td>
+            <td>Scientist</td>
+            <td>48°51'52.9776''N  2°20'56.4504''E</td>
+            <td>6 minutes ago</td>
+          </tr>				
+          <tr>
+            <td>XXX</td>
+            <td>Mx.</td>
+            <td><a href='#' data-toggle="modal" data-target="#ap-modal">Alexi Pelta</a></td>
+            <td>Ordos</td>
+            <td>Speaker</td>
+            <td>43°40'32.9484''N 7°17'21.9444''E</td>
+            <td>12 hours ago</td> 
+          </tr>
+          <tr>
+            <td>XXX</td>
+            <td>Dr.</td>
+            <td><a href='#' data-toggle="modal" data-target="#sp-modal">Simone Pelta</a></td>
+            <td>Ordos</td>
+            <td>Doctor</td>
+            <td>43°30'0.0000''N 5°30'0.0000''E</td>
+            <td>3 months ago</td>
+          </tr>
+          <tr>
+            <td>XXX</td>
+            <td>Mr.</td>
+            <td><a href='#' data-toggle="modal" data-target="#mt-modal">Mikołaj Turowicz</a></td>
+            <td>Ordos</td>
+            <td>Doctor's Assistant</td>
+            <td>43°30'0.0000''N 5°30'0.0000''E</td>
+            <td>3 months ago</td>
+          </tr>
+          <tr>
+            <td>XXX</td>
+            <td>Mr.</td>
+            <td><a href='#' data-toggle="modal" data-target="#al-modal">Aakesh Laghari</a></td>
+            <td></td>
+            <td>Astronaut</td>
+            <td>Moon 3°12'43.2"S 5°12'39.6"W</td>
+            <td>15 years ago</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+<div class="text-center">
+    <nav>
+        <ul class="pagination pagination-base pagination-boxed pagination-square mb-0">
+            <li class="page-item">
+                <a class="page-link no-border" href="#">
+                    <span aria-hidden="true">«</span>
+                    <span class="sr-only">Previous</span>
+                </a>
+            </li>
+            <li class="page-item active"><a class="page-link no-border" href="#">1</a></li>
+            <li class="page-item">
+                <a class="page-link no-border" href="#">
+                    <span aria-hidden="true">»</span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="name-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-fullscreen" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">ID 527 - Neu Bouth</h4>
+        </div>
+
+        <div class="modal-body">
+          <div>
+            <img class="img-center" src="images/neu_bouth.jpg">
+          </div>
+          <br/>
+          <div class="alert alert-info" role="alert">
+            <strong>ID:</strong> 527 <br/>
+            <strong>Title:</strong> Savant <br/>
+            <strong>Full Name:</strong> Neu Bouth <br/>
+            <strong>Home:</strong> 48°51'52.9776''N 2°20'56.4504''E <br/>
+            <strong>Work:</strong> Science Department of Ordos <br/>
+            <strong>Phone:</strong> 123-123-1231 <br/>
+            <strong>Details:</strong> <br/>
+            - invented N.F.T (Nucleus Flux Tracking) in approximately 295 UAF
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="ap-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-fullscreen" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">ID XXX - Alexi Pelta</h4>
+        </div>
+
+        <div class="modal-body">
+          <div>
+            <img class="img-responsive" src="images/unknown.jpg">
+          </div>
+          <br/>
+          <div class="alert alert-info" role="alert">
+            <strong>ID:</strong> XXX <br/>
+            <strong>Title:</strong> Mx. <br/>
+            <strong>Full Name:</strong> Alexi Pelta <br/>
+            <strong>Home:</strong> 43°40'32.9484''N 7°17'21.9444''E <br/>
+            <strong>Work:</strong> Ordos Governing Council <br/>
+            <strong>Phone:</strong> 012-345-6789 <br/>
+            <strong>Details:</strong> <br/>
+            - talks great, won't shut up
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="sp-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-fullscreen" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">ID XXX - Simone Pelta</h4>
+        </div>
+
+        <div class="modal-body">
+          <div>
+            <img class="img-responsive" src="images/unknown.jpg">
+          </div>
+          <br/>
+          <div class="alert alert-info" role="alert">
+            <strong>ID:</strong> XXX <br/>
+            <strong>Title:</strong> Dr.<br/>
+            <strong>Full Name:</strong> Simone Pelta <br/>
+            <strong>Home:</strong> 43°30'0.0000''N 5°30'0.0000''E <br/>
+            <strong>Work:</strong> Ordos Top Secret Research Department <br/>
+            <strong>Phone:</strong> 456-456-4561 <br/>
+            <strong>Details:</strong> <br/>
+            - a genius<br/>
+            - hangs out too much with her assistant
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="mt-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-fullscreen" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">ID XXX - Mikołaj Turowicz</h4>
+        </div>
+
+        <div class="modal-body">
+          <div>
+            <img class="img-responsive" src="images/unknown.jpg">
+          </div>
+          <br/>
+          <div class="alert alert-info" role="alert">
+            <strong>ID:</strong> XXX <br/>
+            <strong>Title:</strong> Mr.<br/>
+            <strong>Full Name:</strong> Mikołaj Turowicz <br/>
+            <strong>Home:</strong> 43°30'0.0000''N 5°30'0.0000''E <br/>
+            <strong>Work:</strong> Ordos Top Secret Research Department <br/>
+            <strong>Phone:</strong> 333-201-1234 <br/>
+            <strong>Details:</strong> <br/>
+            - definitely has a thing for Simone <br/>
+            - didn't even finish his Doctorate! <br/>
+            - way too excited all the time <br/>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="al-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-fullscreen" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">ID XXX - Aakesh Laghari</h4>
+        </div>
+
+        <div class="modal-body">
+          <div>
+            <img class="img-responsive" src="images/unknown.jpg">
+          </div>
+          <br/>
+          <div class="alert alert-info" role="alert">
+            <strong>ID:</strong> XXX <br/>
+            <strong>Title:</strong> Mr.<br/>
+            <strong>Full Name:</strong> Aakesh Laghari <br/>
+            <strong>Home:</strong> 12°7'12.0000''N 76°40'48.0000''E<br/>
+            <strong>Work:</strong> ISRO - Chandrayaan 6 <br/>
+            <strong>Phone:</strong> 222-111-0201 <br/>
+            <strong>Details:</strong> <br/>
+            - presumed to be dead: lost signal from Nucleus Flux Tracker
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+</body>
+</html>
