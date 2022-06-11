@@ -20,7 +20,3 @@ function search_database() {
     }
   }
   
-// name modal pop up
-// $('a[href$="#modal"]').on( "click", function() {
-//     $('#modal').modal('show');
-// });
