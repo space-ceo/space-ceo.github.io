@@ -38,7 +38,7 @@ var allowedKeys = {
   function JSalert(){
 	swal({   
         title: "Wait a second...",   
-        text: '<img src="images/nftdrake.jpg" style="width:420px;">',
+        text: '<img src="images/meme.jpg" style="width:420px;">',
         closeOnConfirm: false,   
         animation: "slide-from-top",   
         html: true
