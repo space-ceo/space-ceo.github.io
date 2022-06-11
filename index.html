@@ -9,17 +9,26 @@
     <script src="http://twitter.github.com/bootstrap/assets/js/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
     <script src="index.js"></script>
 </head>
 
 <body>
-<div class="hero">
+<div class="header">
     <div class="text-container">
-        <h1>Nucleus Flux Tracking Database</h1>
+        <img src="https://pbs.twimg.com/profile_images/1528672155260567552/OM8agDP0_400x400.jpg" style="max-width: 20%;">
+        <h1 class="hacker"><strong>Nucleus Flux Tracking Database</strong></h1>
     </div>
 </div>
 <br/>
-<div class="input-group center ">
+<br/>
+<br/>
+<br/>
+<hr/>
+<br/>
+<div class="input-group center">
     <div class="form-outline">
         <input id="searchbar" onkeyup="search_database()" type="text"
             name="search" placeholder="Search by name..." class="form-control">
@@ -30,13 +39,13 @@
     <table id="nft-table">
         <thead>
           <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Full Name</th>
-            <th>Affiliation</th>
-            <th>Occupation</th>
-            <th>Last Location</th>
-            <th>Last Seen</th> 
+            <th class="hacker">ID</th>
+            <th class="hacker">Title</th>
+            <th class="hacker">Full Name</th>
+            <th class="hacker">Affiliation</th>
+            <th class="hacker">Occupation</th>
+            <th class="hacker">Last Location</th>
+            <th class="hacker">Last Seen</th> 
           </tr>
         </thead>
         <tbody>
@@ -56,7 +65,7 @@
             <td>Ordos</td>
             <td>Speaker</td>
             <td>43°40'32.9484''N 7°17'21.9444''E</td>
-            <td>12 hours ago</td> 
+            <td>10 minutes ago</td> 
           </tr>
           <tr>
             <td>XXX</td>
@@ -65,7 +74,7 @@
             <td>Ordos</td>
             <td>Doctor</td>
             <td>43°30'0.0000''N 5°30'0.0000''E</td>
-            <td>3 months ago</td>
+            <td>1 minute ago</td>
           </tr>
           <tr>
             <td>XXX</td>
@@ -74,7 +83,7 @@
             <td>Ordos</td>
             <td>Doctor's Assistant</td>
             <td>43°30'0.0000''N 5°30'0.0000''E</td>
-            <td>3 months ago</td>
+            <td>1 minute ago</td>
           </tr>
           <tr>
             <td>XXX</td>
